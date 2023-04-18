@@ -54,7 +54,7 @@
                     </c:forEach>
                 </table>
             </form>
-            <!--        <a href="AddUser.jsp"></a><br>-->
+            
             <button onclick="location.href = 'AddUser.jsp'">Add new Student</button><br>
         </div>
         <%--Table content of Teachers

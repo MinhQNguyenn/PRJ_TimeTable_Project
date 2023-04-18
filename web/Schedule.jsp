@@ -55,7 +55,7 @@
                             <a href="info?day=0&slot=0">
                             <div class="subject"><%=subject[0][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[1][0];
@@ -66,7 +66,7 @@
                             <a href="info?day=1&slot=0">
                             <div class="subject"><%=subject[1][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[2][0];
@@ -77,7 +77,7 @@
                             <a href="info?day=2&slot=0">
                             <div class="subject"><%=subject[2][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[3][0];
@@ -88,7 +88,7 @@
                             <a href="info?day=3&slot=0">
                             <div class="subject"><%=subject[3][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[4][0];
@@ -99,7 +99,7 @@
                             <a href="info?day=4&slot=0">
                             <div class="subject"><%=subject[4][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[5][0];
@@ -110,7 +110,7 @@
                             <a href="info?day=5&slot=0">
                             <div class="subject"><%=subject[5][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[6][0];
@@ -121,7 +121,7 @@
                             <a href="info?day=6&slot=0">
                             <div class="subject"><%=subject[6][0]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                     </tr>
                     <tr>
@@ -135,7 +135,7 @@
                             <a href="info?day=0&slot=1">
                             <div class="subject"><%=subject[0][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[1][1];
@@ -146,7 +146,7 @@
                             <a href="info?day=1&slot=1">
                             <div class="subject"><%=subject[1][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[2][1];
@@ -157,7 +157,7 @@
                             <a href="info?day=2&slot=1">
                             <div class="subject"><%=subject[2][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[3][1];
@@ -168,7 +168,7 @@
                             <a href="info?day=3&slot=1">
                             <div class="subject"><%=subject[3][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[4][1];
@@ -179,7 +179,7 @@
                             <a href="info?day=4&slot=1">
                             <div class="subject"><%=subject[4][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[5][1];
@@ -190,7 +190,7 @@
                             <a href="info?day=5&slot=1">
                             <div class="subject"><%=subject[5][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[6][1];
@@ -201,7 +201,7 @@
                             <a href="info?day=6&slot=1">
                             <div class="subject"><%=subject[6][1]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                     </tr>
                     <tr>
@@ -215,7 +215,7 @@
                             <a href="info?day=0&slot=2">
                             <div class="subject"><%=subject[0][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[1][2];
@@ -226,7 +226,7 @@
                             <a href="info?day=1&slot=2">
                             <div class="subject"><%=subject[1][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[2][2];
@@ -237,7 +237,7 @@
                             <a href="info?day=2&slot=2">
                             <div class="subject"><%=subject[2][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[3][2];
@@ -248,7 +248,7 @@
                             <a href="info?day=3&slot=2">
                             <div class="subject"><%=subject[3][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[4][2];
@@ -259,7 +259,7 @@
                             <a href="info?day=4&slot=2">
                             <div class="subject"><%=subject[4][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[5][2];
@@ -270,7 +270,7 @@
                             <a href="info?day=5&slot=2">
                             <div class="subject"><%=subject[5][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[6][2];
@@ -281,7 +281,7 @@
                             <a href="info?day=6&slot=2">
                             <div class="subject"><%=subject[6][2]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                     </tr>
                     <tr>
@@ -295,7 +295,7 @@
                             <a href="info?day=0&slot=3">
                             <div class="subject"><%=subject[0][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[1][3];
@@ -306,7 +306,7 @@
                             <a href="info?day=1&slot=3">
                             <div class="subject"><%=subject[1][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[2][3];
@@ -317,7 +317,7 @@
                             <a href="info?day=2&slot=3">
                             <div class="subject"><%=subject[2][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[3][3];
@@ -328,7 +328,7 @@
                             <a href="info?day=3&slot=3">
                             <div class="subject"><%=subject[3][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[4][3];
@@ -339,7 +339,7 @@
                             <a href="info?day=4&slot=3">
                             <div class="subject"><%=subject[4][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[5][3];
@@ -350,7 +350,7 @@
                             <a href="info?day=5&slot=3">
                             <div class="subject"><%=subject[5][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                         <td>
                             <%s = subject[6][3];
@@ -361,7 +361,7 @@
                             <a href="info?day=6&slot=3">
                             <div class="subject"><%=subject[6][3]%></div>
                             </a>
-<!--                            <input type="Submit" name="Detail" value=<%=s%>>-->
+
                         </td>
                     </tr>
                 </tbody>
