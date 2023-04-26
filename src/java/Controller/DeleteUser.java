@@ -23,10 +23,12 @@ public class DeleteUser extends HttpServlet{
         
     }
 
+    //This page would be redirected by the user when the user clicked on the link to delete the student
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ArrayList <User> student = new ArrayList<>();
         ArrayList <User> teacher = new ArrayList<>();
+        //Delete the corresponding student from the list
         try{
             if(req.getParameter("mode").equals("1")){
                 int mode = 1;
@@ -34,13 +36,14 @@ public class DeleteUser extends HttpServlet{
                 User u = new User();
                 u.deleteUser(mode, id);
                 student = u.getListStudent();
-            }else{
-                int mode = 2;
-                String id = req.getParameter("id");
-                User u = new User();
-                u.deleteUser(mode, id);
-                teacher = u.getListTeacher();
             }
+//            else{
+//                int mode = 2;
+//                String id = req.getParameter("id");
+//                User u = new User();
+//                u.deleteUser(mode, id);
+//                teacher = u.getListTeacher();
+//            }
         }catch(Exception e){
             System.out.println("Delete: " + e.getMessage());
         }

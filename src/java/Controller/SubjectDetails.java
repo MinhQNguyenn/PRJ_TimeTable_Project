@@ -19,14 +19,17 @@ public class SubjectDetails extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //Assume that we get the name
+        //Get the info regarding the subject from the database
+        // based on the name of the subject chosen by the user
         String name = req.getParameter("Detail");
         Subject s = new Subject();
         s.setSubject(name);
         req.setAttribute("info", s);
         req.getRequestDispatcher("SubjectInfo.jsp").forward(req, resp);
     }
-
+    
+    //Based on the slot and date in which the class would taken place to take out
+    // the subject info. More accurate than the method in the doPost() function
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try{

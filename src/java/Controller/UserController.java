@@ -23,6 +23,8 @@ public class UserController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ArrayList<User> student = new ArrayList<>();
         ArrayList<User> teacher = new ArrayList<>();
+        //Add the info for the new student to the database based on user's input
+        // on the AddUser.jsp page
         try {
             if (req.getParameter("Add1") != null) {
                 String id = req.getParameter("id");

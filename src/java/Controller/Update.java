@@ -21,6 +21,8 @@ public class Update extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ArrayList<User> student = new ArrayList<>();
+        //Update the info of the student in the database based on the changes 
+        // inputted in the Update.jsp page
         try {
             if (req.getParameter("update") != null) {
                 String id = req.getParameter("id");
