@@ -48,7 +48,7 @@
                             <td>${item.getClasses()}</td>
                             <td>${item.getSemester()}</td>
                             <td>${item.getFacility()}</td>
-                            <td><a href="delete?mode=1&id=${item.getID()}">Delete</a></td>
+                            <td><a href="delete?mode=1&id=${item.getID()}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
                             <td><a href="update?mode=1&id=${item.getID()}">Update</a></td>
                         </tr>
                     </c:forEach>
