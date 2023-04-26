@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Mode</title>
+        <title>Subject Info</title>
         <link href="css/admin.css" rel="stylesheet"> 
     </head>
     <body style="background-image: url('img/admin.jpg');">
@@ -22,7 +22,7 @@
             if(request.getAttribute("info")!= null)
                subject = (Subject)request.getAttribute("info");
         %>
-        <h2>List of Students</h2>
+        <h2>Information of the Subject</h2>
         <div class="table-wrapper">
             <%--Table content of Students--%>
             <form action="admin" method="post" id="admin1">

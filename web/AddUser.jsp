@@ -2,6 +2,7 @@
     Document   : AddUser
     Created on : Mar 11, 2023, 5:16:06 PM
     Author     : minh
+    Purpose    :
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
