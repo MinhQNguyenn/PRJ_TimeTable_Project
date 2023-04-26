@@ -17,6 +17,12 @@
         <link href="css/admin.css" rel="stylesheet"> 
     </head>
     <body style="background-image: url('img/admin.jpg');">
+        <input type="submit" onClick="getInformation()" value="Logout"/> 
+        <script>
+            function getInformation() {
+                window.location.href = "LoginPage.jsp";
+            }
+        </script>
         <h2>List of Students</h2>
         <div class="table-wrapper">
             <%--Table content of Students--%>
@@ -54,7 +60,7 @@
                     </c:forEach>
                 </table>
             </form>
-            
+
             <button onclick="location.href = 'AddUser.jsp'">Add new Student</button><br>
         </div>
         <%--Table content of Teachers

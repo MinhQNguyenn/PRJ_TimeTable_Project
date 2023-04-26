@@ -14,13 +14,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Time Table</title>
         <link href="css/schedule.css" rel="stylesheet">
-        <script>
-            function clickDetails(var a){
-                window.location.href = "Info?detail=" + a;
-            }
-        </script>
     </head>
     <body style="background-image: url('img/schedule2.jpg');">
+        <script>
+            function getInformation() {
+                window.location.href = "LoginPage.jsp";
+            }
+        </script>
         <%
             String[][] subject = new String[7][4];
             if(request.getAttribute("subject")!= null)
@@ -366,6 +366,7 @@
                     </tr>
                 </tbody>
             </table>
-        </form>
+        </form><br>
+        <input type="submit" onClick="getInformation()" value="Logout"/> 
     </body>
 </html>
