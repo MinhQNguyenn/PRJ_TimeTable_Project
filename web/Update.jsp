@@ -25,12 +25,12 @@
                 <div class="row">
                     <h2>Update Student Info</h2>
                     <div class="input-group">
-                        <input type="text" name="id" value="<%=u.getID()%>">
-                        <input type="text" name="name" placeholder="Name: <%=u.getName()%>"><br>
-                        <input type="email" name="email" placeholder="Email: <%=u.getEmail()%>"><br>
-                        <input type="text" name="pass" placeholder="Password: <%=u.getPassword()%>"><br>
-                        <input type="text" name="class" placeholder="Class: <%=u.getClasses()%>"><br>
-                        <input type="text" name="semester" placeholder="Semester: <%=u.getSemester()%>"><br> 
+                        <input type="text" name="id" value="<%=u.getID()%>" readonly>
+                        <input type="text" name="name" value="<%=u.getName()%>"><br>
+                        <input type="email" name="email" value="<%=u.getEmail()%>"><br>
+                        <input type="text" name="pass" value="<%=u.getPassword()%>"><br>
+                        <input type="text" name="class" value="<%=u.getClasses()%>"><br>
+                        <input type="text" name="semester" value="<%=u.getSemester()%>"><br> 
                         <select name="facility">
                             <option>Select Campus</option>
                             <option value="Hola">FU-Hòa Lạc</option>
