@@ -33,9 +33,6 @@ public class LoginController extends HttpServlet {
         if (req.getParameter("user").equals("3")) {
             mode = 1;
         }
-//        else if(req.getParameter("user").equals("2")){
-//            mode = 3;
-//        }
        
         String facility = req.getParameter("facility");
         String email = req.getParameter("email");
@@ -60,9 +57,7 @@ public class LoginController extends HttpServlet {
                 session.setAttribute("admin", u);
                 User temp = new User();
                 ArrayList<User> student = temp.getListStudent();
-                ArrayList<User> teacher = temp.getListTeacher();
                 req.setAttribute("student", student);
-                req.setAttribute("teacher", teacher);
                 req.getRequestDispatcher("Admin.jsp").forward(req, resp);
             }
 

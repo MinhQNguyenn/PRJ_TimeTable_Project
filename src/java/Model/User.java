@@ -197,8 +197,6 @@ public class User {
             String strSelect = "";
             if (mode == 2) {
                 strSelect = "Select * from Student where email=? and Password=? and Facility=?";
-            } else if (mode == 3) {
-                strSelect = "Select * from Teacher where email=? and Password=? and Facility=?";
             }
             pstm = cnn.prepareStatement(strSelect);
             pstm.setString(1, email);
@@ -243,38 +241,6 @@ public class User {
             System.out.println("GetListStudent" + e.getMessage());
         }
         return student;
-    }
-
-    public ArrayList<User> getListTeacher() {
-        ArrayList<User> teacher = new ArrayList<>();
-        try {
-            String strSelect = "select * from Teacher";
-            stm = cnn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            rs = stm.executeQuery(strSelect);
-            while (rs.next()) {
-                String id = rs.getString(1);
-                String name = rs.getString(2);
-                String password = rs.getString(3);
-                String email = rs.getString(4);
-                String dob = "";
-                if (rs.getDate(5) != null) {
-                    SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
-                    dob = f.format(rs.getDate(5));
-                }
-                String gender = "Female";
-                if (rs.getBoolean(6)) {
-                    gender = "Male";
-                }
-                String classes = rs.getString(7);
-                String facility = rs.getString(8);
-
-                teacher.add(new User(name, id, classes, gender, email, password, dob, facility));
-            }
-
-        } catch (Exception e) {
-            System.out.println("GetListTeacher: " + e.getMessage());
-        }
-        return teacher;
     }
 
     //Add to the data base based on the mode(student/teacher)
