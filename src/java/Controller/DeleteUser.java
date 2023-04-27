@@ -37,6 +37,10 @@ public class DeleteUser extends HttpServlet{
                 u.deleteUser(mode, id);
                 student = u.getListStudent();
             }
+            //Delete Subject
+            else if (req.getParameter("mode").equals("4")){
+                
+            }
         }catch(Exception e){
             System.out.println("Delete: " + e.getMessage());
         }

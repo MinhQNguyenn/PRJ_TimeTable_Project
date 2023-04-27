@@ -20,6 +20,14 @@
         <servlet-name>SubjectInfo</servlet-name>
         <servlet-class>Controller.SubjectDetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>manageSubject</servlet-name>
+        <servlet-class>Controller.SubjectController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addSubject</servlet-name>
+        <servlet-class>Controller.AddSubject</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>SubjectInfo</servlet-name>
         <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>manageSubject</servlet-name>
+        <url-pattern>/manageSubject</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addSubject</servlet-name>
+        <url-pattern>/addSubject</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

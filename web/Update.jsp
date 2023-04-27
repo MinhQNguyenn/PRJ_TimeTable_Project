@@ -4,8 +4,10 @@
     Author     : minh
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import = "Model.User" %>
+<%@ page import = "java.util.Date,java.text.SimpleDateFormat,java.text.ParseException"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +20,7 @@
         User u = new User();
         if(request.getAttribute("student") != null){
             u = (User)request.getAttribute("student");
-            }
+        }
         %>
         <div class="container">
             <form action="update" method="post">
@@ -47,7 +49,7 @@
                         <h4>Date of birth</h4>
                         <div class="input-group">
                             <div class="col-third">
-                                <input type="date" name="dob">
+                                <input type="date" name="dob" value="<%=u.getDob()%>">
                             </div>
                         </div>
                     </div>

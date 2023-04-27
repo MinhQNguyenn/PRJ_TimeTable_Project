@@ -8,8 +8,12 @@ import Dal.DBContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -23,7 +27,7 @@ public class Subject {
     public Subject() {
         connect();
     }
-    
+
     public Subject(String name, int day, int slot) {
         this.name = name;
         this.day = day;
@@ -38,6 +42,17 @@ public class Subject {
         this.classes = classes;
         this.courseID = courseID;
         this.slot = slot;
+        connect();
+    }
+
+    public Subject(String name, String semester, String classes, String courseID, String courseName, int slot, int day) {
+        this.name = name;
+        this.semester = semester;
+        this.classes = classes;
+        this.courseID = courseID;
+        this.courseName = courseName;
+        this.slot = slot;
+        this.day = day;
         connect();
     }
 
@@ -96,7 +111,6 @@ public class Subject {
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
-    
 
     //Khai bao cac thanh phan xu ly database
     Connection cnn; //ket noi
@@ -136,7 +150,7 @@ public class Subject {
 
     public void setSubject(int day, int slot) {
         try {
-            String courseID="1", semester="1";
+            String courseID = "1", semester = "1";
             String strSelect = "select * from Subject where slot='" + slot + "' and  day='" + day + "'";
             stm = cnn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             rs = stm.executeQuery(strSelect);
@@ -144,20 +158,61 @@ public class Subject {
                 this.setName(rs.getString(1));
                 this.setDay(day);
                 this.setSlot(slot);
-                courseID =rs.getString(4);
+                courseID = rs.getString(4);
                 semester = rs.getString(5);
                 this.setSemester(rs.getString(5));
                 this.setClasses(rs.getString(6));
             }
-            strSelect = "select distinct Name from Course where courseID='" + courseID + "' and semester='" +semester+ "'";
+            strSelect = "select distinct Name from Course where courseID='" + courseID + "' and semester='" + semester + "'";
             stm = cnn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             rs = stm.executeQuery(strSelect);
-             while (rs.next()) {
-                 this.setCourseName(rs.getString(1));
-             }
+            while (rs.next()) {
+                this.setCourseName(rs.getString(1));
+            }
         } catch (Exception e) {
             System.out.println("GetListStudent" + e.getMessage());
         }
     }
 
+    public ArrayList<Subject> getListSubject() {
+        ArrayList<Subject> subject = new ArrayList<>();
+        try {
+            String strSelect = "select distinct subject.name, day, slot, Course.Name, subject.Semester, subject.class from subject join Course on Subject.CourseID=Course.CourseID";
+            stm = cnn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            rs = stm.executeQuery(strSelect);
+            while (rs.next()) {
+                String name = rs.getString(1);
+                int day = rs.getInt(2) + 1;
+                int slot = rs.getInt(3) + 1;
+                String courseName = rs.getString(4);
+                String semester = rs.getString(5);
+                String classes = rs.getString(6);
+                subject.add(new Subject(name, day, semester, classes, courseName, slot));
+            }
+
+        } catch (Exception e) {
+            System.out.println("GetListStudent" + e.getMessage());
+        }
+        return subject;
+    }
+    
+    public void addSubject(){
+        String strAdd = "Insert into Subject values(?, ?, ?, ?, ?, ?);";
+            try {
+                pstm = cnn.prepareStatement(strAdd);
+                pstm.setString(1, name);
+                pstm.setInt(2, day);
+                pstm.setInt(3, slot);
+                pstm.setString(4, courseID);
+                pstm.setString(5, semester);
+                pstm.setString(6, classes);
+                rs = pstm.executeQuery();
+            } catch (SQLException ex) {
+                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    
+    
+
+    
 }

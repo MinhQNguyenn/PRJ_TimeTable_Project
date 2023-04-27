@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,6 +24,7 @@ import java.util.logging.Logger;
 public class User {
 
     String name, ID, semester, classes, gender, email, password, facility, dob;
+    Date date;
 
     public User() {
         connect();
@@ -163,6 +165,13 @@ public class User {
             }
         } catch (Exception e) {
         }
+    }
+    
+    public Date getDate() throws ParseException{
+        String dob=this.dob;
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        Date date = (Date)df.parse(dob);  
+        return date;
     }
 
     public boolean checkUserExist(int mode) {
@@ -381,11 +390,11 @@ public class User {
                 this.setName(rs.getString(2));
                 this.setPassword(rs.getString(3));
                 this.setEmail(rs.getString(4));
-//                this.setDob("");
-//                if (rs.getDate(5) != null) {
-//                    SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
-//                    this.setEmail(f.format(rs.getDate(5)));
-//                }
+                this.setDob("");
+                if (rs.getDate(5) != null) {
+                    SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
+                    this.setDob(f.format(rs.getDate(5)));
+                }
 //            this.gender = rs.getString(6);
                 this.setClasses(rs.getString(7));
                 this.setSemester(rs.getString(9));
