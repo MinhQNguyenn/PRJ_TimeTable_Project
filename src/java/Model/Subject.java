@@ -35,6 +35,14 @@ public class Subject {
         connect();
     }
 
+    public Subject(String name, String classes, int slot, int day) {
+        this.name = name;
+        this.classes = classes;
+        this.slot = slot;
+        this.day = day;
+        connect();
+    }
+
     public Subject(String name, int day, String semester, String classes, String courseID, int slot) {
         this.name = name;
         this.day = day;
@@ -195,24 +203,39 @@ public class Subject {
         }
         return subject;
     }
-    
-    public void addSubject(){
-        String strAdd = "Insert into Subject values(?, ?, ?, ?, ?, ?);";
-            try {
-                pstm = cnn.prepareStatement(strAdd);
-                pstm.setString(1, name);
-                pstm.setInt(2, day);
-                pstm.setInt(3, slot);
-                pstm.setString(4, courseID);
-                pstm.setString(5, semester);
-                pstm.setString(6, classes);
-                rs = pstm.executeQuery();
-            } catch (SQLException ex) {
-                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    
-    
 
+    public void addSubject() {
+        String strAdd = "Insert into Subject values(?, ?, ?, ?, ?, ?);";
+        try {
+            pstm = cnn.prepareStatement(strAdd);
+            pstm.setString(1, name);
+            pstm.setInt(2, day);
+            pstm.setInt(3, slot);
+            pstm.setString(4, courseID);
+            pstm.setString(5, semester);
+            pstm.setString(6, classes);
+            rs = pstm.executeQuery();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void deleteSubject(String classes, int day, int slot, String name) {
+        try {
+            String strDelete = "delete from subject where class=? day=? slot=? name=?";
+            pstm = cnn.prepareStatement(strDelete);
+            pstm.setString(1, classes);
+            pstm.setInt(2, day);
+            pstm.setInt(3, slot);
+            pstm.setString(4, name);
+            pstm.execute();
+        } catch (Exception E) {
+            System.out.println("Delete: " + E.getMessage());
+        }
+    }
     
+    public void updateSubject(){
+        
+    }
+
 }

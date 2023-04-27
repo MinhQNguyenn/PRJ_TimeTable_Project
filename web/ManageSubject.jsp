@@ -42,8 +42,8 @@
                             <td>${item.getSlot()}</td>
                             <td>${item.getSemester()}</td>
                             <td>${item.getClasses()}</td>
-                            <td><a href="delete?mode=3&class=${item.getClasses()}&name=${item.getName()}&day=${item.getDay()}&slot=${item.getSlot()}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
-                            <td><a href="update?mode=3&class=${item.getClasses()}&name=${item.getName()}&day=${item.getDay()}&slot=${item.getSlot()}">Update</a></td>
+                            <td><a href="delete?mode=4&class=${item.getClasses()}&name=${item.getName()}&day=${item.getDay()}&slot=${item.getSlot()}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
+                            <td><a href="updateSubject?mode=3&class=${item.getClasses()}&name=${item.getName()}&day=${item.getDay()}&slot=${item.getSlot()}">Update</a></td>
                         </tr>
                     </c:forEach>
                 </table>
