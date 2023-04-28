@@ -180,10 +180,8 @@ public class User {
             String strSelect = "";
             if (mode == 1) {
                 strSelect = "Select * from Admin where email=? and Password=? and Facility=?";
-            } else if (mode == 2) {
-                strSelect = "Select * from Student where email=? and Password=? and Facility=?";
             } else {
-                strSelect = "Select * from Teacher where email=? and Password=? and Facility=?";
+                strSelect = "Select * from Student where email=? and Password=? and Facility=?";
             }
 
             pstm = cnn.prepareStatement(strSelect);

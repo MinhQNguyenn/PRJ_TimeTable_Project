@@ -17,6 +17,11 @@
         <link href="css/admin.css" rel="stylesheet"> 
     </head>
     <body style="background-image: url('img/admin.jpg');">
+        <script>
+            function getInformation() {
+                window.location.href = "LoginPage.jsp";
+            }
+        </script>
         <input type="submit" onClick="getInformation()" value="Logout"/> 
         <h2>List of Students</h2>
         <div class="table-wrapper">

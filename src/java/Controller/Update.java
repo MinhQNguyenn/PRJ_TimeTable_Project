@@ -53,7 +53,6 @@ public class Update extends HttpServlet {
         String id = req.getParameter("id");
         User u = new User(id);
         try {
-            //ERROR BUG
             u.setUser(id);
         } catch (Exception e) {
             System.out.println("Update:" + e.getMessage());

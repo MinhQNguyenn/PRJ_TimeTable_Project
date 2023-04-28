@@ -49,7 +49,8 @@
                         <h4>Date of birth</h4>
                         <div class="input-group">
                             <div class="col-third">
-                                <input type="date" name="dob" value="<%=u.getDob()%>">
+                                <%--Doesn't allow the user to update the value for the DOB--%>
+                                <input type="text" name="dob" value="<%=u.getDob()%>">
                             </div>
                         </div>
                     </div>

@@ -361,7 +361,6 @@
                             <a href="info?day=6&slot=3">
                             <div class="subject"><%=subject[6][3]%></div>
                             </a>
-
                         </td>
                     </tr>
                 </tbody>
